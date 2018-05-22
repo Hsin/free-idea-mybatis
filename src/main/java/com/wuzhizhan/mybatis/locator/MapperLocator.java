@@ -14,12 +14,17 @@ import org.jetbrains.annotations.Nullable;
  */
 public class MapperLocator {
 
-    public static LocateStrategy dfltLocateStrategy = new PackageLocateStrategy();
+    private static LocateStrategy dfltLocateStrategy = new PackageLocateStrategy();
 
     public static MapperLocator getInstance(@NotNull Project project) {
         return ServiceManager.getService(project, MapperLocator.class);
     }
 
+    /**
+     * Check method,class and package is valid
+     * @param method Method
+     * @return Boolean
+     */
     public boolean process(@Nullable PsiMethod method) {
         return null != method && process(method.getContainingClass());
     }

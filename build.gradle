@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'cn.wuzhizhan.idea.mybatis'
-version = '2018.05.17'
+version = '2018.05.22'
 
 apply plugin: 'java'
 sourceCompatibility = 1.8
@@ -18,7 +18,7 @@ dependencies {
 intellij {
     version = 'IU-2016.1'
     pluginName = 'free-idea-mybatis'
-    plugins = ['coverage','Spring','DatabaseTools']
+    plugins = ['coverage', 'Spring', 'DatabaseTools']
     intellij.updateSinceUntilBuild false
 }
 patchPluginXml {
